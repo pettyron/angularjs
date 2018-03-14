@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test Models</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <style>
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  </style>
+</head>
+<body ng-controller="mainController">
+  <div class="container">
+    <div class="form-content">
+      <form name="myForm" ng-model="myModel">
+        <div class="form-row pt-4">
+          <div class="form-group col-md-3">
+            <label for="">Base Loan Amount:</label>
+            <input class="form-control" type="number" name="baseLoanAmt" ng-model="myModel.baseLoanAmt" ng-blur="updateValues('baseLoanAmt', myModel.baseLoanAmt)" ng-step="any" ng-model-options="{debounce: 1000}">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="">Estimated Value:</label>
+            <input class="form-control" type="number" name="estimatedVal" ng-model="myModel.estimatedVal" ng-blur="updateValues('estimatedVal', myModel.estimatedVal)" ng-step="any" ng-model-options="{debounce: 1000}">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="">LTV:</label>
+            <input class="form-control" type="number" name="ltv" ng-model="myModel.ltv" ng-blur="updateValues('ltv', myModel.ltv)" ng-step="any" ng-model-options="{debounce: 1000}">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="output--json pt-4">
+      <div class="border rounded bg-light text-dark pt-3 px-2 pb-1">
+        <pre>{{myModel | json}}</pre>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+  <script src="./app/app.js"></script>
+  <script src="./app/controller.js"></script>
+</body>
+</html>
