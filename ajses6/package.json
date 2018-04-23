@@ -1,0 +1,41 @@
+{
+  "name": "ajses6",
+  "version": "1.0.0",
+  "description": "AngularJS Test in ES6",
+  "main": "./src/app/app.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack -w  --display-max-modules 0",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "author": "Ronnie Petty",
+  "license": "MIT",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.15",
+    "angular": "1.5.7",
+    "angular-route": "1.5.7",
+    "bootstrap": "^4.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "browser-sync": "^2.23.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "cross-env": "^5.1.4",
+    "css-loader": "^0.28.11",
+    "del": "^3.0.0",
+    "del-cli": "^1.1.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "http-proxy-middleware": "^0.18.0",
+    "node-sass": "^4.8.3",
+    "postcss-loader": "^2.1.4",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  }
+}
