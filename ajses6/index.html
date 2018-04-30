@@ -10,25 +10,6 @@
 </head>
 <body>
   <view-app></view-app>
-  <div class="container pt-3" ng-controller="MainController as vm">
-    <div class="card">
-      <div class="card-body">
-        <div class="card-title">
-          <h2>{{ vm.name }}</h2>
-        </div>
-        <div>
-          <label>Enter your username: </label>
-          <input class="form-control" type="text" value="username" focus-select>
-        </div>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><span class="text-info pr-2">Marital Status:</span> {{ vm.status | uppercase }}</li>
-        <li class="list-group-item"><span class="text-info pr-2">Occupation:</span> {{ vm.occupation | uppercase }}</li>
-        <li class="list-group-item"><span class="text-info pr-2">Location:</span> {{ vm.location | uppercase }}</li>
-        <li class="list-group-item"><span class="text-info pr-2">Date:</span> {{ vm.dateNow | date : 'MMMM, d, y h:mm a' }}</li>
-      </ul>
-    </div>
-  </div>
   <script src="./src/app/build/app.build.js" charset="utf-8"></script>
 </body>
 </html>

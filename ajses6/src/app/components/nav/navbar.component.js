@@ -1,8 +1,12 @@
-import MainController from '../../controllers/MainController'
+import NavbarController from './navbar.controller.js'
 
 let NavBar = {
   templateUrl: './src/app/components/nav/navbar.html',
-  controller: MainController,
+  require: {
+    parent: '^viewApp'
+  },
+  controller: NavbarController,
+  controllerAs: 'navbar',
   bindings: {}
 }
 

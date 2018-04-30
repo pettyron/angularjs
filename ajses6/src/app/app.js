@@ -2,7 +2,6 @@ import '../sass/main.scss'
 import angular from 'angular'
 import { module } from 'angular'
 import uirouter from '@uirouter/angularjs'
-import MainController from './controllers/MainController'
 import { formatFactory } from './services/factories'
 import { FocusSelect } from './directives/directives'
 import Components from './components/components'
@@ -15,7 +14,6 @@ const app = module('app', [
 .config(($locationProvider) => {
   'ngInject'
 })
-.controller('MainController', MainController)
 .factory('formatFactory', formatFactory)
 .directive('focusSelect', FocusSelect)
 .component('viewApp', AppComponent)

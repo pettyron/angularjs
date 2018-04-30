@@ -1,0 +1,8 @@
+{
+  "age": 42,
+  "favorites": {
+    "food": "sushi",
+    "animal": "dog",
+    "movie": "Coco"
+  }
+}
